@@ -1,10 +1,12 @@
 import re
 
-lst = []
+sum = 0
+a = list()
 
-fh = open("regex_sum_42.txt", "r")
+fh = open("regex_sum_34406.txt", "r")
 for line in fh:
-	a = re.findall('[0-9]+', fh)
-	lst.append(a)
+	a = re.findall('[0-9]+', line)
+	for aa in a:
+		sum += int(aa)
 
-print(lst)
+print(sum)
